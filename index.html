@@ -479,31 +479,62 @@
     .contact-item-value a:hover { color: var(--gold); }
 
     /* ── FORM ── */
-    .contact-form { display: flex; flex-direction: column; gap: 16px; }
-    .form-group { display: flex; flex-direction: column; gap: 8px; }
-    .form-group label { font-size: 9px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; font-weight: 600; }
+    <form class="contact-form" action="https://formspree.io/f/mgodnpqb" method="POST">
 
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      background: var(--dark3);
-      border: 1px solid rgba(201,168,76,0.2);
-      color: var(--white);
-      padding: 14px 18px;
-      font-family: 'Raleway', sans-serif;
-      font-size: 13px;
-      outline: none;
-      transition: border-color 0.3s;
-      width: 100%;
-    }
+  <input type="hidden" name="_subject" value="New Estimate Request — Absolute Restoration"/>
 
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus { border-color: var(--gold); }
+  <p class="section-tag">Free Estimate</p>
 
-    .form-group select option { background: var(--dark3); }
-    .form-group textarea { height: 120px; resize: none; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  <div class="form-row">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" name="first_name" placeholder="John" required/>
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" name="last_name" placeholder="Smith" required/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="tel" name="phone" placeholder="(909) 000-0000" required/>
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="you@email.com" required/>
+  </div>
+
+  <div class="form-group">
+    <label>City</label>
+    <input type="text" name="city" placeholder="Riverside, Ontario, etc." required/>
+  </div>
+
+  <div class="form-group">
+    <label>Service Needed</label>
+    <select name="service" required>
+      <option value="">Select a service...</option>
+      <option>Drywall</option>
+      <option>Painting</option>
+      <option>Plumbing</option>
+      <option>Landscaping</option>
+      <option>Lawn Care</option>
+      <option>General Repairs</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Tell Us About Your Project</label>
+    <textarea name="message" placeholder="Describe your project..."></textarea>
+  </div>
+
+  <button type="submit" class="btn-primary" style="width:100%; padding:18px; font-size:12px; cursor:pointer;">
+    Send Request
+  </button>
+
+</form>
 
     /* ── FOOTER ── */
     footer {
